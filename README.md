@@ -1,3 +1,16 @@
+# Build and run using docker
+
+```
+docker build -t matchaplayer.jfrog.io/app/ui .
+docker run --rm  -it -p 3000:80/tcp matchaplayer.jfrog.io/app/ui
+```
+
+## Push to artifactory
+* Use this only when it's definitely needed in artifactory. Our limits can get exhausted.
+
+docker login matchaplayer.jfrog.io (Only the first time)
+docker push matchaplayer.jfrog.io/app/ui
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
